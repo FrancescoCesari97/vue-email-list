@@ -27,7 +27,16 @@
 <body>
     <div id="root">
         <div class="container text-center my-5">
-           <h1>{{greetings}}</h1>
+
+            <div v-if="randomEmails.length == maxEmail">
+
+                <ul>
+                 <li v-for="mail in randomEmails">
+                     {{mail}}
+                 </li>
+                </ul>
+
+            </div>
             
 
         <div id="profile-list" class="row ">
